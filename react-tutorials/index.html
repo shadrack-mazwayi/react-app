@@ -1,0 +1,20 @@
+<html>
+<!--This file is used to demonstrate an HTML page with DOM manipulation. It is used to compare with the React version in index_react.html-->
+
+<body>
+    <div id="app"></div>
+    <script type="text/javascript">
+        const app = document.getElementById('app');
+        const header = document.createElement('h1');
+
+        // Create a new text node for the H1 element
+        const text = 'Develop. Preview. Ship.';
+        const headerContent = document.createTextNode(text);
+        header.appendChild(headerContent);
+
+        // Place the H1 element inside the div
+        app.appendChild(header);
+    </script>
+</body>
+
+</html>

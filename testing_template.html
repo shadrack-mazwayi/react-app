@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Test Case Document</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 20px;
+    color: #000;
+  }
+
+  .container {
+    border: 2px solid red;
+    padding: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+
+  td, th {
+    border: 1px solid #000;
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .no-border td {
+    border: none;
+  }
+
+  .header {
+    font-weight: bold;
+  }
+
+  .section-title {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .checkbox {
+    width: 20px;
+    text-align: center;
+  }
+
+  .small {
+    font-size: 11px;
+  }
+
+  .spacer {
+    height: 40px;
+  }
+
+  @media print {
+    body {
+      margin: 0;
+    }
+    .container {
+      border: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <table>
+    <tr>
+      <td class="header">1-01</td>
+      <td class="header">CLICK HERE TO ENTER TEXT.</td>
+    </tr>
+  </table>
+
+  <!-- Test Group Preconditions -->
+  <table>
+    <tr class="section-title">
+      <td>Test Group Preconditions</td>
+      <td class="checkbox">Checked</td>
+    </tr>
+    <tr>
+      <td>&gt; {{group_precondition_1}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+  </table>
+
+  <!-- Test Case Header -->
+  <table>
+    <tr class="section-title">
+      <td>1-01.01 Click here to enter text.</td>
+      <td class="right">TC 1-01.01</td>
+    </tr>
+  </table>
+
+  <!-- Meta Info -->
+  <table>
+    <tr>
+      <td><b>Test Set</b></td>
+      <td>{{test_set}}</td>
+      <td class="right small">STP</td>
+      <td class="right small">Not Tested</td>
+    </tr>
+    <tr>
+      <td><b>Test Group</b></td>
+      <td>{{test_group}}</td>
+      <td colspan="2"></td>
+    </tr>
+  </table>
+
+  <!-- Description -->
+  <table>
+    <tr>
+      <td><b>Test Description</b></td>
+      <td>{{test_description}}</td>
+      <td><b>Technique</b></td>
+      <td>Positive Testing</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Procedure</b></td>
+      <td>Functional Testing</td>
+    </tr>
+  </table>
+
+  <!-- TC Preconditions -->
+  <table>
+    <tr class="section-title">
+      <td>TC Preconditions</td>
+      <td class="checkbox">Checked</td>
+    </tr>
+    <tr>
+      <td>&gt; See Test Group 1-01 preconditions</td>
+      <td class="checkbox">-</td>
+    </tr>
+    <tr>
+      <td>&gt; {{tc_precondition_1}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>&gt; {{tc_precondition_2}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+  </table>
+
+  <!-- TC Sequence -->
+  <table>
+    <tr class="section-title">
+      <td>TC Sequence</td>
+      <td class="checkbox">Checked</td>
+    </tr>
+    <tr>
+      <td>1. {{step_1}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>2. {{step_2}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>3. {{step_3}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>4. {{step_4}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>5. {{step_5}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>6. {{step_6}}</td>
+      <td class="checkbox"><input type="checkbox"></td>
+    </tr>
+  </table>
+
+  <!-- Members + Status -->
+  <table>
+    <tr>
+      <td><b>Test Members:</b></td>
+      <td>
+        &lt;&lt;tmTesterSTP&gt;&gt;<br>
+        {{member_2}}<br>
+        {{member_3}}
+      </td>
+      <td><b>Phase:</b></td>
+      <td>STP</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Status:</b></td>
+      <td>Not Tested</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><b>Date:</b></td>
+      <td>{{date}}</td>
+    </tr>
+  </table>
+
+  <!-- Feedback -->
+  <table>
+    <tr class="section-title">
+      <td>TC Feedback:</td>
+    </tr>
+    <tr><td class="spacer"></td></tr>
+    <tr><td class="spacer"></td></tr>
+    <tr><td class="spacer"></td></tr>
+  </table>
+
+  <!-- Attachments -->
+  <table>
+    <tr>
+      <td><b>Attachments:</b></td>
+      <td class="spacer"></td>
+    </tr>
+  </table>
+
+</div>
+
+</body>
+</html>

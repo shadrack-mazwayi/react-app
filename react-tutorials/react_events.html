@@ -1,0 +1,59 @@
+<html>
+
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel Script for JSX syntax compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+        const domNode  = document.getElementById('app');
+ 
+        {/* Define a React component/function with props/arguments */}
+        
+        {/*
+        function Header(header) {
+            return <h1>{header.title}</h1>;
+        }
+        */}
+
+        function Header({title}) {
+            return <h1>{title ? title : 'Default Title'}</h1>;
+        }
+
+        function HomePage() {
+
+            {/* Define an array of names to be rendered in the component */}
+            const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+            {/* Define a state variable with count and update function using React's useState hook */}
+            const [count, setCount] = React.useState(0); 
+
+            {/* Define a function to handle button click events */}
+            function handleClick() {
+                setCount(count + 1);
+            }
+
+            return (
+                <div>
+                    {/* Nesting the Header component */}
+                    <Header title="Develop. Preview. Ship." />
+
+                    <ul>
+                        {names.map(name => (
+                            <li key={name}>{name}</li>
+                        ))}
+                    </ul>
+
+                    <button onClick={handleClick}>Count ({count})</button>
+
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(domNode);
+        root.render(<HomePage />);
+    </script>
+</body>
+
+</html>
